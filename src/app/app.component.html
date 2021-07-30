@@ -1,9 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript Bsp. Mitarbeitsaufgabe</title>
+  <script type="text/Javascript">
 
-<h2>
-  meine erste website
-</h2>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur fuga itaque nece
-  ssitatibus quam quisquam reiciendis tempora totam voluptate voluptatem
-  ! Asperiores ea, est id incidunt laborum nam soluta sunt temporibus!
-</p>
+
+	function split(Name)
+	{
+
+		Full = Name;
+		Nachname ="";
+
+
+		for(i = 0; i < Name.length; i++)
+		{
+			if (Name.substring(i, i + 1) == " ")
+			{
+				Nachname = Name.substring(i + 1, Name.length);
+				return Nachname;
+			}
+		}
+	}
+	</script>
+</head>
+
+<body style="background-color:lime">
+
+<form name="myFrom" id="myFrom">
+  <input type="text" size="30%" name="Eingabe">
+  <input type="button" value="Nachname Ausgabe" onClick="this.form.Ausgabe.value = split(this.form.Eingabe.value)">
+  <input type="text" name="Ausgabe" readonly="readonly">
+</form>
+
+</body>
+</html>
